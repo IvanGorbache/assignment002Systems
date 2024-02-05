@@ -1,13 +1,14 @@
 #include<stdio.h>
 #include "my_mat.h"
 
-void inputMatrix(int mat[SIZE][SIZE])
+void inputMatrix(int mat[SIZE][SIZE], int input[INPUT_SIZE])
 {
+    int k = 0;
     for(int i=0;i<SIZE;i++)
     {
         for(int j=0;j<SIZE;j++)
         {
-            scanf("%d",&mat[i][j]);
+            mat[i][j] = input[k++];
         }
     }
 }
