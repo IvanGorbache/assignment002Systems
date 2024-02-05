@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 				case 'A':
 					inputMatrix(mat);
 				case 'B':
-					PathExists(mat, (char)fgetc(f) - '0', (char)fgetc(f) - '0')?printf("True"):printf("False");
+					pathExists(mat, (char)fgetc(f) - '0', (char)fgetc(f) - '0')?printf("True"):printf("False");
 				case 'C':
 					printf("%d",shortestPath(mat, (char)fgetc(f) - '0', (char)fgetc(f) - '0'));
 				case 'D':
