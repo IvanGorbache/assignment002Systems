@@ -10,7 +10,6 @@ void inputMatrix(int mat[SIZE][SIZE])
             scanf("%d",&mat[i][j]);
         }
     }
-    
 }
 int pathExists(int mat[SIZE][SIZE], int i, int j)
 {
@@ -43,5 +42,6 @@ int shortestPath(int mat[SIZE][SIZE], int i, int j)
 		    }
 		}
 	}
-    return mat[i][j]!=0?mat[i][j]:-1;
+    return dist[i][j]!=0?dist[i][j]:-1;
 }
+
