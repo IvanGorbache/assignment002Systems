@@ -1,14 +1,47 @@
+#include<stdio.h>
 #include "my_mat.h"
 
-void inputMatrix(int mat[][], int rowSize, int columnSize)
+void inputMatrix(int mat[SIZE][SIZE])
 {
+    for(int i=0;i<SIZE;i++)
+    {
+        for(int j=0;j<SIZE;j++)
+        {
+            scanf("%d",&mat[i][j]);
+        }
+    }
     
 }
-int pathExists(int mat[][], int rowSize, int columnSize), int i, int j)
+int pathExists(int mat[SIZE][SIZE], int i, int j)
 {
-    return FALSE;
+    return shortestPath(mat,i,j)!=-1?TRUE:FALSE;
 }
-int shortestPath(int mat[][], int rowSize, int columnSize), int i, int j)
+int shortestPath(int mat[SIZE][SIZE], int i, int j)
 {
-    return FALES;
+    int dist[SIZE][SIZE];
+    for(int i=0;i<SIZE;i++)
+    {
+        for(int j=0;j<SIZE;j++)
+        {
+            dist[i][j] = mat[i][j];
+        }
+    }
+	for(int i=0;i<SIZE;i++)
+    {
+    	dist[i][i] = 0;
+    }
+	for(int k = 1;k<SIZE;k++)
+	{
+		for(int i=0;i<SIZE;i++)
+		{
+		    for(int j=0;j<SIZE;j++)
+		    {
+		        if(dist[i][j] > (dist[i][k] + dist[k][j]))
+				{
+					dist[i][j] = dist[i][k] + dist[k][j];
+				}
+		    }
+		}
+	}
+    return mat[i][j]!=0?mat[i][j]:-1;
 }

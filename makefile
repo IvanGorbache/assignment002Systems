@@ -1,11 +1,12 @@
-all: my_mat.o main.o main
+all: main.o my_mat.o connections
 
-main: main.o my_mat.o
-	gcc -c -Wall $@ $^
-
-my_mat.o: my_mat.c my_mat.h
-	gcc -Wall -o $^ 
+connections: main.o my_mat.o
+	gcc -Wall main.o my_mat.o -o prog1
 
 main.o: main.c my_mat.h
-	gcc -Wall -o $^ 
+	gcc -c -Wall main.c
 
+my_mat.o: my_mat.c my_mat.h
+	gcc -c -Wall my_mat.c
+clean:
+	rm -f *.o prog1

@@ -13,6 +13,11 @@
             "cwd": "/home/galvatron/Desktop/cSystemsAssignments/002/code",
             "binaryPath": "/home/galvatron/Desktop/cSystemsAssignments/002/code/main.c",
             "binaryArgs": []
+        },
+        {
+            "cwd": "/home/galvatron/Desktop/cSystemsAssignments/002/code",
+            "binaryPath": "/home/galvatron/Desktop/cSystemsAssignments/002/code/prog1",
+            "binaryArgs": []
         }
     ]
 }
