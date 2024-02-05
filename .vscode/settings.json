@@ -1,5 +1,18 @@
 {
     "files.associations": {
-        "my_mat.h": "c"
-    }
+        "my_mat.h": "c",
+        "stdio.h": "c"
+    },
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/galvatron/Desktop/cSystemsAssignments/002/code",
+            "binaryPath": "/home/galvatron/Desktop/cSystemsAssignments/002/code/my_mat.c",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "/home/galvatron/Desktop/cSystemsAssignments/002/code",
+            "binaryPath": "/home/galvatron/Desktop/cSystemsAssignments/002/code/main.c",
+            "binaryArgs": []
+        }
+    ]
 }
